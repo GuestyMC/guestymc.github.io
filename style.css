@@ -1,0 +1,181 @@
+:root {
+  /* --- Microsoft Fluent Dark Theme (SharePoint/Teams Era) --- */
+  --themePrimary: #0078d4;
+  --themeLighterAlt: #eff6fc;
+  --themeLighter: #deecf9;
+  --themeLight: #c7e0f4;
+  --themeTertiary: #71afe5;
+  --themeSecondary: #2b88d8;
+  --themeDarkAlt: #106ebe;
+  --themeDark: #005a9e;
+  --themeDarker: #004578;
+
+  --neutralLighterAlt: #2b2b2b;
+  --neutralLighter: #323130;
+  --neutralLight: #3f3e3d;
+  --neutralQuaternaryAlt: #484746;
+  --neutralQuaternary: #4f4e4d;
+  --neutralTertiaryAlt: #6b6a69;
+  --neutralTertiary: #c8c6c4;
+  --neutralSecondary: #d0d0d0;
+  --neutralPrimaryAlt: #dadada;
+  --neutralPrimary: #ffffff;
+  --neutralDark: #f4f4f4;
+  --black: #ffffff;
+  --white: #201f1e;
+
+  --bodyBackground: #201f1e;
+  --bodyText: #ffffff;
+  --bodySubtext: #d0d0d0;
+  --bodyDivider: #3f3e3d;
+
+  --cardBackground: #2b2b2b;
+  --cardHoverBackground: #323130;
+
+  --fontFamily: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fontFamily);
+  background-color: var(--bodyBackground);
+  color: var(--bodyText);
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Adjustments */
+.hoo-header {
+  background-color: #0078d4; /* Classic SharePoint Blue */
+  color: #ffffff;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.hoo-header-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Hero/Persona Section */
+.hero-section {
+  padding: 60px 0;
+  border-bottom: 1px solid var(--bodyDivider);
+}
+
+.hero-persona {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--themePrimary);
+}
+
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-data {
+  flex: 1;
+}
+
+.hero-name {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.hero-description {
+  font-size: 18px;
+  color: var(--bodySubtext);
+}
+
+/* Projects Grid */
+.projects-section {
+  padding: 40px 0;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 32px; /* Increased margin to prevent overlap */
+  color: var(--themePrimary);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Document Card Overrides for Dark Mode */
+.hoo-doccard {
+  background-color: var(--cardBackground) !important;
+  border: 1px solid var(--neutralLight) !important;
+  transition: background-color 0.2s ease;
+  overflow: hidden; /* Ensure content doesn't bleed out */
+}
+
+.hoo-cardimage {
+  height: 200px; /* Increased height for better visibility */
+  overflow: hidden;
+  display: flex;
+  background-color: var(--neutralLight);
+}
+
+.hoo-cardimage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top; /* Move the image content down by showing the top first */
+  display: block;
+}
+
+.hoo-doccard:hover {
+  background-color: var(--cardHoverBackground) !important;
+  border-color: var(--themePrimary) !important;
+}
+
+.hoo-cardtitle {
+  color: var(--neutralPrimary) !important;
+}
+
+.hoo-cardlocation {
+  color: var(--themePrimary) !important;
+}
+
+.hoo-cardfooter {
+  border-top: 1px solid var(--neutralLight) !important;
+}
+
+/* Footer */
+footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--bodyDivider);
+  text-align: center;
+  color: var(--bodySubtext);
+  font-size: 14px;
+}
